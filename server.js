@@ -27,5 +27,5 @@ io.on('connection', socket => {
     })
   })
 })
-
+console.log("Server Running")
 server.listen(PORT)
