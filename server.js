@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 const { v4: uuidV4 } = require('uuid')
 
 app.set('view engine', 'ejs')
@@ -26,4 +28,4 @@ io.on('connection', socket => {
   })
 })
 
-server.listen(3000)
+server.listen(PORT)
